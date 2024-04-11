@@ -72,6 +72,21 @@ plt.show()
 # Exercise 3
 # author Faroq Abdulla Fazjar
 # state: ongoing
+# Exercice 3--------------------------------------------------------------------
+# White font and excluding the word THY
+canvas_width=1920
+canvas_height=1080 
+wordcloud = WordCloud(width=canvas_width,height=canvas_height).generate(text)
+stopwords = set(STOPWORDS)
+stopwords.add("THY")
+
+wordcloud = WordCloud(stopwords=stopwords,background_color='white',random_state=1,colormap='hot',max_font_size=800,min_font_size=20,width=canvas_width,height=canvas_height).generate(text)
+wordcloud.to_file("simple_wordcloud.png") 
+plt.figure(figsize = (10, 10), facecolor=None)
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis("off") 
+plt.tight_layout(pad = 0)
+plt.show() 
 
 # Exercise 4
 # author Desena baby kumar

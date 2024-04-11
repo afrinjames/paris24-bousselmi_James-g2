@@ -12,7 +12,7 @@ Original file is located at
 # state: ongoing
 
 # Exercise 2
-# author first member
+# author Afrin James
 # state: ongoing
 
 # Exercise 3

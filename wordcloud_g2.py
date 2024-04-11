@@ -8,7 +8,7 @@ Original file is located at
 """
 
 # Exercise 1
-# author first member
+# author Faroq Abdulla Fazjar
 # state: ongoing
 
 # Exercise 2

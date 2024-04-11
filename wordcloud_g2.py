@@ -9,7 +9,7 @@ Original file is located at
 
 # Exercise 1
 # author Faroq Abdulla Fazjar
-# state: ongoing
+# state: complete
 
 #Exercise 1----------------------------------------------------------------
 !pip install wordcloud
@@ -70,7 +70,7 @@ plt.tight_layout(pad = 0)
 plt.show()
 
 # Exercise 3
-# author first member
+# author Faroq Abdulla Fazjar
 # state: ongoing
 
 # Exercise 4

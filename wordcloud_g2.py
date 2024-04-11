@@ -32,7 +32,7 @@ plt.show()
 
 # Exercise 2
 # author Afrin James
-# state: ongoing
+# state: Completed
 
 !pip install pillow
 import numpy as np 

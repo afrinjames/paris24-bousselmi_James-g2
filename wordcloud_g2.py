@@ -122,3 +122,15 @@ wc.to_file("color_masked_wordcloud.png")
 # Exercise 7
 # author Desena Baby Kumar
 # state: ongoing
+
+# Exercise 8
+# author Afrin James
+# state: ongoing
+
+# Exercise 9
+# author Afrin James
+# state: ongoing
+
+# Exercise 10
+# author Faroq Abdulla Fazjar
+# state: ongoing

@@ -74,17 +74,17 @@ plt.show()
 # state: ongoing
 
 # Exercise 4
-# author second member
+# author Desena baby kumar
 # state: ongoing
 
 # Exercise 5
-# author second member
+# author Afrin James
 # state: ongoing
 
 # Exercise 6
-# author second member
+# author Faroq Abdulla Fazjar
 # state: ongoing
 
 # Exercise 7
-# author second member
+# author Desena Baby Kumar
 # state: ongoing

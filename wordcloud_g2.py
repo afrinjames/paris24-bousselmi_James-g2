@@ -71,7 +71,8 @@ plt.show()
 
 # Exercise 3
 # author Faroq Abdulla Fazjar
-# state: ongoing
+# state: Completed
+
 # Exercice 3--------------------------------------------------------------------
 # White font and excluding the word THY
 canvas_width=1920

@@ -195,6 +195,51 @@ plt.show()
 # author Desena Baby Kumar
 # state: ongoing
 
+# Create a cloud from an article on a webpage
+!pip install Article
+!pip install newspaper3k
+from newspaper import Article
+
+article = Article('https://fr.wikipedia.org/wiki/Cryptomonnaie')
+article.download()
+article.parse()
+
+article.text
+
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+wc = WordCloud()
+wc.generate(article.text)
+plt.figure(figsize = (10, 10), facecolor=None)
+plt.imshow(wc, interpolation="bilinear")
+plt.axis('off')
+plt.tight_layout(pad = 0)
+plt.show()
+
+from wordcloud import STOPWORDS
+
+STOPWORDS  = ['d','nombre','nécessaire','cet','grande', 'l', 'fait','article', 'soit', 'mais', 'non','modifier','pas', 'sa', 'selon', 'donc', 'mai', 'peu','pas','très', 'cherche','article','ont','favorisent','nous','cependant','partie','dépend', 'standard','existants', 'nos', 'théoriques','son','avec','celles', 'davantage', 'étudier', 'lequel', 'bancaire','aide', 'impliquent', 'dites', 'désormais', 'telles','tels', 'tout','avec', 'travaux', 'fournir','relativement','autres','obtenu','termes','cherche''telles','Reingold','soutenir','idée','ne', 'disposent', 'travail','différentes','concerne','qu', 'établissement','établissements','relations','certains','pendant', 'même', 'dont','ils','elles', 'cette','été', 'où','ainsi','après', 'leurs', 'peut', 'avant','entre', 'on','du', 'théorique','cet','de', 'la', 'des', 'le', 'et', 'est', 'elle', 'une', 'en', 'que', 'aux', 'qui', 'ces', 'les', 'dans', 'sur', 'l', 'un', 'pour', 'par', 'il', 'ou', 'à', 'ce', 'a', 'sont', 'cas', 'plus', 'leur', 'se', 's', 'vous', 'au', 'c', 'aussi', 'toutes', 'autre', 'comme']
+WC = WordCloud(background_color="white", max_words=2000,
+               stopwords=STOPWORDS, max_font_size=256,
+               random_state=42, width=500, height=500)
+wc.generate(article.text)
+plt.figure(figsize = (10, 10), facecolor=None)
+plt.imshow(wc, interpolation="bilinear")
+plt.axis('off')
+plt.tight_layout(pad = 0)
+plt.show()
+
+# Add MASK
+mask= np.array(Image.open("cl.jpg"))
+STOPWORDS = ['d','nombre','nécessaire','cet','de','code','grande', 'l', 'fait','d','une','depuis','article', 'soit', 'mais', 'non','modifier','pas', 'sa', 'selon', 'donc', 'mai', 'peu','pas','très', 'cherche','article','ont','favorisent','nous','cependant','partie','dépend', 'standard','existants', 'nos', 'théoriques','son','avec','celles', 'davantage', 'étudier', 'lequel', 'bancaire','aide', 'impliquent', 'dites', 'désormais', 'telles','tels', 'tout','avec', 'travaux', 'fournir','relativement','autres','obtenu','termes','cherche','telles','Reingold','soutenir','idée','ne', 'disposent', 'travail','différentes','concerne','qu', 'établissement','établissements','relations','certains','pendant', 'même', 'dont','ils','elles', 'cette','été', 'où','ainsi','après', 'leurs', 'peut', 'avant','entre', 'on','du', 'théorique','cet','de', 'la', 'des', 'le', 'et', 'est', 'elle', 'une', 'en', 'que', 'aux', 'qui', 'ces', 'les', 'dans', 'sur', 'l', 'un', 'pour', 'par', 'il', 'ou', 'à', 'ce', 'a', 'sont', 'cas', 'plus', 'leur', 'se', 's', 'vous', 'au', 'c', 'aussi', 'toutes', 'autre', 'comme']
+wc = WordCloud(background_color='mintcream',stopwords=STOPWORDS, mask=mask,colormap='cubehelix',random_state=1,max_font_size=50,min_font_size=1)
+wc.generate(article.text)
+plt.figure(figsize = (10, 10), facecolor=None)
+plt.imshow(wc, interpolation="bilinear")
+plt.axis('off')
+plt.tight_layout(pad = 0)
+plt.show()
+
 # Exercise 8
 # author Afrin James
 # state: ongoing

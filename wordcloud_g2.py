@@ -91,6 +91,22 @@ plt.show()
 # Exercise 4
 # author Desena baby kumar
 # state: ongoing
+# Use Masks
+romeo_mask= np.array(Image.open("romeo1.jpg"))
+#read image
+wc = WordCloud(mask=romeo_mask,colormap='inferno',random_state=5,
+max_font_size=50,min_font_size=0)
+#generate wordcloud with text data
+wc.generate(text)
+#save image
+wc.to_file("masked_wc.jpg")
+#show image
+plt.figure(figsize = (10, 10), facecolor=None)
+plt.tight_layout(pad = 0)
+plt.imshow(wc, interpolation='bilinear')
+
+# off axis on image
+plt.show() #show image
 
 # Exercise 5
 # author Afrin James

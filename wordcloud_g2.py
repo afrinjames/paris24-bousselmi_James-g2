@@ -73,7 +73,6 @@ plt.show()
 # author Faroq Abdulla Fazjar
 # state: Completed
 
-# Exercice 3--------------------------------------------------------------------
 # White font and excluding the word THY
 canvas_width=1920
 canvas_height=1080 
@@ -95,7 +94,26 @@ plt.show()
 
 # Exercise 5
 # author Afrin James
-# state: ongoing
+# state: Completed
+
+# Use of colored image for your mask so that the Cloud adapts to it (Exercise 5)
+image = np.array(Image.open("romeo2.jpg"))
+image_mask = image.copy()
+image[image_mask.sum(axis=2) == 0] = 255
+edges = np.mean([gaussian_gradient_magnitude(image[:, :, i] / 255., 2) for i in range(3)], axis=0)
+image_mask[edges > .1] = 255
+
+wc = WordCloud(background_color='black', mask=image_mask, mode='RGBA')
+wc.generate(text)
+
+image_colors = ImageColorGenerator(image)
+wc.recolor(color_func=image_colors)
+
+plt.figure(figsize = (10, 10), facecolor=None)
+plt.figure(figsize=(10, 10))
+plt.tight_layout(pad = 0)
+plt.imshow(wc, interpolation="bilinear")
+wc.to_file("color_masked_wordcloud.png")
 
 # Exercise 6
 # author Faroq Abdulla Fazjar
